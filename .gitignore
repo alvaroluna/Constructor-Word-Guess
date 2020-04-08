@@ -1,0 +1,4 @@
+**/node_modules
+**/NoUpload
+*.DS_Store
+*.env

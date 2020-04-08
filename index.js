@@ -74,7 +74,7 @@ function Main() {
   var correctLetters = [];
 
   // guesses left
-  var guessesLeft = randomWord.length * 1.5;
+  var guessesLeft = randomWord.length * 2.0;
 
   function GameLogic() {
     // generate new word for Word() constructor if true
@@ -189,7 +189,7 @@ function Main() {
           requireNewWord = true;
           incorrectLetters = [];
           correctLetters = [];
-          guessesLeft = randomWord.length * 1.5;
+          guessesLeft = randomWord.length * 2.0;
           GameLogic();
         } else {
           return;

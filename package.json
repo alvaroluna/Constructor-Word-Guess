@@ -1,0 +1,22 @@
+{
+  "name": "constructor-word-guess",
+  "version": "1.0.0",
+  "description": "UCB Homework Assignment 11 - For this assignment, I created a Word Guess command-line game using constructor functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvaroluna/Constructor-Word-Guess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvaroluna/Constructor-Word-Guess/issues"
+  },
+  "homepage": "https://github.com/alvaroluna/Constructor-Word-Guess#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  }
+}

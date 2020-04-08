@@ -1,26 +1,44 @@
 ////////////////////////
 // LETTER CONSTRUCTOR //
 ////////////////////////
-function Letter(word) {
+function Letter(char) {
   // input parameters
-  this.word = word;
+  this.char = char;
 
-  // variable if word has been solved
+  // variable if char has been solved
   this.solved = false;
 
   // methods
-  this.something = function () {};
+  this.ToString = function () {
+    if (this.char === " ") {
+      this.solved = true;
+      return " ";
+    } else {
+      if (this.solved === false) {
+        return "_";
+      } else {
+        return this.char;
+      }
+    }
+  };
 
-  this.otherSomething = function () {};
+  this.guess = function (guess) {
+    if (guess === this.char) {
+      this.solved = true;
+    }
+  };
 }
+
+// export Letter object
+module.exports = Letter;
 
 ////////////////////////
 // MAIN TEST FUNCTION //
 ////////////////////////
 function TestMain() {
   // remember to use new!
-  var testObj = new Letter((word = "cow"));
-  console.log(testObj.word);
+  var testObj = new Letter((char = "c"));
+  console.log(testObj.char);
 }
 
 TestMain();

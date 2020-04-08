@@ -41,4 +41,4 @@ function TestMain() {
   console.log(testObj.char);
 }
 
-TestMain();
+// TestMain();

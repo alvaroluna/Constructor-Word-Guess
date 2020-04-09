@@ -5,26 +5,25 @@ var Letter = require("./letter.js");
 // WORD CONSTRUCTOR //
 //////////////////////
 function Word(answer) {
-  // letter objects array
-  this.objList = [];
+  //Letter objects array
+  this.objArray = [];
 
   for (var i = 0; i < answer.length; i++) {
     var letter = new Letter(answer[i]);
-    this.objList.push(letter);
+    this.objArray.push(letter);
   }
 
-  this.Log = function () {
+  this.log = function () {
     answerLog = "";
-    for (var i = 0; i < this.objList.length; i++) {
-      answerLog += this.objList[i] + " ";
+    for (var i = 0; i < this.objArray.length; i++) {
+      answerLog += this.objArray[i] + " ";
     }
-
     console.log(answerLog + "\n");
   };
 
-  this.UserGuess = function (input) {
-    for (var i = 0; i < this.objList.length; i++) {
-      this.objList[i].guess(input);
+  this.userGuess = function (input) {
+    for (var i = 0; i < this.objArray.length; i++) {
+      this.objArray[i].guess(input);
     }
   };
 }

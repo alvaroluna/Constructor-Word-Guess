@@ -1,30 +1,25 @@
 ////////////////////////
 // LETTER CONSTRUCTOR //
 ////////////////////////
-function Letter(char) {
-  // input parameters
-  this.char = char;
-
-  // variable if char has been solved
-  this.solved = false;
-
-  // methods
-  this.ToString = function () {
-    if (this.char === " ") {
-      this.solved = true;
+function Letter(value) {
+  this.letter = value;
+  this.guessed = false;
+  this.toString = function () {
+    if (this.letter === " ") {
+      this.guessed = true;
       return " ";
     } else {
-      if (this.solved === false) {
+      if (this.guessed === false) {
         return "_";
       } else {
-        return this.char;
+        return this.letter;
       }
     }
   };
 
   this.guess = function (guess) {
-    if (guess === this.char) {
-      this.solved = true;
+    if (guess === this.letter) {
+      this.guessed = true;
     }
   };
 }

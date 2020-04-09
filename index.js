@@ -70,7 +70,7 @@ var correctLetters = [];
 // Guesses left
 var guessesLeft = 10;
 
-function knowledge() {
+function GameLogic() {
   // Generates new word for Word constructor if true
   if (requireNewWord) {
     // Selects random americanPresidents array
@@ -103,7 +103,7 @@ function knowledge() {
           input.userinput.length > 1
         ) {
           console.log("\nPlease try again!\n");
-          knowledge();
+          GameLogic();
         } else {
           if (
             incorrectLetters.includes(input.userinput) ||
@@ -111,7 +111,7 @@ function knowledge() {
             input.userinput === ""
           ) {
             console.log("\nAlready Guessed or Nothing Entered\n");
-            knowledge();
+            GameLogic();
           } else {
             // Checks if guess is correct
             var wordCheckArray = [];
@@ -144,7 +144,7 @@ function knowledge() {
             // Guesses left
             if (guessesLeft > 0) {
               // Call function
-              knowledge();
+              GameLogic();
             } else {
               console.log("Sorry, you lose!\n");
 
@@ -184,11 +184,11 @@ function restartGame() {
         incorrectLetters = [];
         correctLetters = [];
         guessesLeft = 10;
-        knowledge();
+        GameLogic();
       } else {
         return;
       }
     });
 }
 
-knowledge();
+GameLogic();
